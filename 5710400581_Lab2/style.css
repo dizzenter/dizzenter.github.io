@@ -1,0 +1,257 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	background: #fff url(http://www.hardcoregamer.com/wp-content/uploads/2013/08/GoWHGJScreen2.jpg) no-repeat bottom right fixed; 
+	margin: 0; 
+	padding: 0;
+	background-size: cover;
+	}
+p { 
+	color: #FAF0E6;
+	margin-top: 0; 
+	text-align: justify;
+	}
+h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #FF99D0;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #B7A5DF;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D3D3D3;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #D3ACE6;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+
+/* specific divs */
+#wrapper-bg{
+	position: relative;
+  	padding: 0 50px 50px 50px;
+  	margin: 50px 200px 100px 100px;
+  	background: rgb(34,34,34); /* for IE */
+  	background: rgba(34,34,34,0.55);	
+}
+
+
+.intro { 
+	min-width: 470px;
+	width: 100%;
+	}
+
+header h1 { 
+	background:  url(http://zengardenmarket.com/wp-content/uploads/Zen-Garden-Logo-2.gif) no-repeat top left;
+	background-size: cover;
+	display: block;
+	width: 269px;
+	height: 147px;
+	float: left;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+header h2 { 
+	color: #2ecc71;
+	margin-top: 58px; 
+	margin-bottom: 40px; 
+	width: 280px; 
+	height: 100px; 
+	float: right;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+header {
+	padding-top: 20px;
+	height: 87px;
+}
+#zen-summary{
+	border: 30px solid ;
+	border-image: url(https://img.clipartfest.com/13cf14107863c49046b6d487572908d1_download-this-image-as-plant-borders-clipart_600-463.png) 50 round;
+	filter: drop-shadow(5px 5px 10px gray);
+	padding:10px 10px 0 10px;
+
+}
+
+.summary {
+	clear: both; 
+	margin: 20px 20px 20px 10px; 
+	width: 160px; 
+	float: left;
+	}
+.summary p {
+	font: italic 1.1em/2.2 georgia; 
+	text-align: center;
+	}
+
+.preamble {
+	clear: right; 
+	padding: 50px 10px 0 10px;
+	}
+.supporting {	
+	padding-left: 10px; 
+	margin-bottom: 40px;
+	}
+
+footer a:link, footer a:visited { 
+	margin-right: 20px; 
+	}
+nav{
+	color:#FF99B3;
+}
+
+.zen-validate-html{
+	background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/200px-HTML5_logo_and_wordmark.svg.png);
+	margin-top: 130px;
+	margin-left: 500px;
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	float: left;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+.zen-validate-css{
+	background: url(https://uploads.toptal.io/blog/category/logo/364/CSS.png);
+	margin-top: 125px;
+	margin-left: 10px;
+	background-size: cover;
+	width: 60px;
+	height: 60px;
+	float: left;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+.zen-license{
+	background: url(http://www.thegraphicmac.com/wp-content/uploads/icon_creative-commons.png);
+	margin-top: 130px;
+	margin-left: 5px;
+	background-size: cover;
+	width: 150px;
+	height: 50px;
+	float: left;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+
+.zen-accessibility{
+	background: url(http://online-learning-solutions.net/blog/wp-content/uploads/2013/10/accessibility_icon.png);
+	margin-top: 130px;
+	margin-left: 5px;
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	float: left;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+
+.zen-github{
+	background: url(https://cdn2.iconfinder.com/data/icons/black-white-social-media/64/social_media_logo_github-128.png);
+	margin-top: 130px;
+	margin-left: 5px;
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	float: left;
+	text-indent: 100%;
+	white-space: nowrap;
+
+}
+
+
+.sidebar {
+	margin-left: 600px; 
+	position: fixed; 
+	top: 0; 
+	right: 0;
+	}
+.sidebar .wrapper { 
+	font: 10px verdana, sans-serif; 
+	background: rgba(34,34,34,0.35);
+	border: 30px solid ;
+	border-image: url(https://img.clipartfest.com/13cf14107863c49046b6d487572908d1_download-this-image-as-plant-borders-clipart_600-463.png) 80 round;
+	padding-left: 5px; 
+	margin-top: 150px; 
+	width: 130px; 
+	}
+.sidebar h3.select { 
+	color: #F08080;
+	margin: 10px 0 5px 0; 
+	width: 110px; 
+	height: 16px; 
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.archives { 
+	margin: 25px 0 5px 0; 
+	width:150px; 
+	height: 14px; 
+	color: #F08080;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.resources { 
+	color: #F08080;	margin: 25px 0 5px 0; 
+	width:150px; 
+	height: 15px; 
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	}
+.sidebar li {
+	line-height: 1.3em; 
+	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
+	filter: drop-shadow(5px 5px 10px gray);
+	display: block; 
+	padding-top: 5px; 
+	margin-bottom: 5px;
+	list-style-type: none;
+	}
+.sidebar li a:link {
+	/*color: #D3ACE6;*/
+	color:#FFDEAD;
+	}
+.sidebar li a:visited {
+	color: #B3AE94;
+	}
+
+
+.extra1 {
+	position: fixed; 
+	top: 0; 
+	right: 0; 
+	}
