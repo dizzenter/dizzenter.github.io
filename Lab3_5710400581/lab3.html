@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<title>Profile Form</title>
+<link rel="stylesheet" media="screen" href="style.css">
+<body>
+<div class="box" >
+	<h1>Profile Form</h1>
+	<form  action="lab3_table.html">
+		First Name: 
+		<input type="text" name="fname" id = "fname" required><br><br>
+
+		Last Name:
+		<input type="text" name="lname" id ="lname" required><br><br>
+
+		Address:<br>
+		<ul style="list-style-type:none">
+			<li><label>House number: </label><input type="text" id="House" name="House" > </li>	
+			<li><label class="l2">Street: </label><input type="text" id="Street" name="Street"> </li>
+			<li><label class="l3">City: </label><input type="text" id="City" name="City"> </li>
+			<li><label class="l4">Province: </label><input type="text" id="Province" name="Province"> </li>
+			<li><label class="l5">Zipcode: </label><input type="text" id="Zipcode" name="Zipcode"> </li>
+		</ul>
+
+		Phone number: 
+		(<input type=tel size=1 maxlength="0" id='pnum1' value="+662">) <input type=tel size=1 id='pnum2'maxlength="3"> - <input type=tel size=1 id='pnum3' maxlength="4">
+		<br><br>
+
+    	Cell phone number :
+    	(<input type=tel size=2 maxlength="5" id='cnum1' value="+66">) <input type=tel size=1 id='cnum2'maxlength="3"> -<input type=tel size=1 id='cnum3' maxlength="4">
+    	<br><br>
+
+    	Birthday: <input type="date" name="bday" id='Birthday'><br><br>
+
+    	Citizenship number: 
+		<input type="text" size="10" name="Citizenship" id='Citizenship' maxlength="13" required><br><br>
+		
+    Zodiac Sign:
+		<select id = 'zsign'>
+  			<option value="AQUARIUS">AQUARIUS</option>
+  			<option value="PISCES">PISCES</option>
+  			<option value="ARIES">ARIES</option>
+  			<option value="TAURUS">TAURUS</option>
+  			<option value="GEMINI">GEMINI</option>
+  			<option value="CANCER">CANCER</option>
+  			<option value="LEO">LEO</option>
+  			<option value="VIRGO">VIRGO</option>
+  			<option value="LIBRA">LIBRA</option>
+  			<option value="SCORPIO">SCORPIO </option>
+  			<option value="SAGITTARIUS">SAGITTARIUS</option>
+  			<option value="CAPRICORN">CAPRICORN</option>
+		</select><br><br>
+		
+    Zodiac Year:
+		<select id="zyear">
+  			<option value="RAT">RAT</option>
+  			<option value="Ox">Ox</option>
+  			<option value="Tiger">Tiger</option>
+  			<option value="Rabbit">Rabbit</option>
+  			<option value="Dragon">Dragon</option>
+  			<option value="Snake">Snake</option>
+  			<option value="Horse">Horse</option>
+  			<option value="Goat">Goat</option>
+  			<option value="Monkey">Monkey</option>
+  			<option value="Rooster">Rooster </option>
+  			<option value="Dog">Dog</option>
+  			<option value="Pig">Pig</option>
+		</select><br><br>
+		
+    Birth Day of Week: 
+		  <select id="bdw">
+  			<option value="Monday">Monday</option>
+  			<option value="Tuesday">Tuesday</option>
+  			<option value="Wednesday">Wednesday</option>
+  			<option value="Thursday">Thursday</option>
+  			<option value="Friday">Friday</option>
+  			<option value="Saturday">Saturday</option>
+  			<option value="Sunday">Sunday</option>  			
+		</select><br><br>
+		<button type="button" id="saveButton" onclick="saveFunc()">Save</button>
+		<input type="reset" id="cancelButton" value="Cancel">
+		<input type="submit" id="submitButton" onclick="submitFunc()" value="Submit">
+	</form>
+</div>
+
+
+<script type="text/javascript">
+function setCookie(cname,cvalue) {
+    document.cookie = cname + "=" + cvalue + ";"
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function submitFunc(){
+  var first_name = document.getElementById('fname').value;
+  var last_name = document.getElementById('lname').value;
+  var citizen = document.getElementById('Citizenship').value;
+  if (first_name !== "" && last_name!=="" && citizen !== "") {
+        setCookie("name",first_name);                
+        setCookie("Citizenship",citizen)        
+        var c_name = getCookie("name");
+        alert("Name:"+c_name);
+    localStorage.setItem('fname', document.getElementById('fname').value);
+    localStorage.setItem('lname', document.getElementById('lname').value);
+    localStorage.setItem('House', document.getElementById('House').value);
+    localStorage.setItem('Street', document.getElementById('Street').value);
+    localStorage.setItem('City', document.getElementById('City').value);
+    localStorage.setItem('Province', document.getElementById('Province').value);
+    localStorage.setItem('Zipcode', document.getElementById('Zipcode').value);
+    localStorage.setItem('pnum1', document.getElementById('pnum1').value);
+    localStorage.setItem('pnum2', document.getElementById('pnum2').value);
+    localStorage.setItem('pnum3', document.getElementById('pnum3').value);
+    localStorage.setItem('cnum1', document.getElementById('cnum1').value);
+    localStorage.setItem('cnum2', document.getElementById('cnum2').value);
+    localStorage.setItem('cnum3', document.getElementById('cnum3').value);
+    localStorage.setItem('Birthday', document.getElementById('Birthday').value);
+    localStorage.setItem('Citizenship', document.getElementById('Citizenship').value);
+    localStorage.setItem('zsign', document.getElementById('zsign').value);
+    localStorage.setItem('zyear', document.getElementById('zyear').value);
+    localStorage.setItem('bdw', document.getElementById('bdw').value);            
+    }
+}
+
+  function saveFunc(){    
+    sessionStorage.setItem('fname', document.getElementById('fname').value);
+    sessionStorage.setItem('lname', document.getElementById('lname').value);
+    sessionStorage.setItem('House', document.getElementById('House').value);
+    sessionStorage.setItem('Street', document.getElementById('Street').value);
+    sessionStorage.setItem('City', document.getElementById('City').value);
+    sessionStorage.setItem('Province', document.getElementById('Province').value);
+    sessionStorage.setItem('Zipcode', document.getElementById('Zipcode').value);
+    sessionStorage.setItem('pnum1', document.getElementById('pnum1').value);
+    sessionStorage.setItem('pnum2', document.getElementById('pnum2').value);
+    sessionStorage.setItem('pnum3', document.getElementById('pnum3').value);
+    sessionStorage.setItem('cnum1', document.getElementById('cnum1').value);
+    sessionStorage.setItem('cnum2', document.getElementById('cnum2').value);
+    sessionStorage.setItem('cnum3', document.getElementById('cnum3').value);
+    sessionStorage.setItem('Birthday', document.getElementById('Birthday').value);
+    sessionStorage.setItem('Citizenship', document.getElementById('Citizenship').value);
+    sessionStorage.setItem('zsign', document.getElementById('zsign').value);
+    sessionStorage.setItem('zyear', document.getElementById('zyear').value);
+    sessionStorage.setItem('bdw', document.getElementById('bdw').value);
+  }
+  window.onload = function()  {
+    if(sessionStorage.getItem("fname") !== null){
+      document.getElementById("fname").value = sessionStorage.getItem("fname");
+    }
+    document.getElementById("lname").value = sessionStorage.getItem("lname");
+    document.getElementById("House").value = sessionStorage.getItem("House");
+    document.getElementById("Street").value = sessionStorage.getItem("Street");
+    document.getElementById("City").value = sessionStorage.getItem("City");
+    document.getElementById("Province").value = sessionStorage.getItem("Province");
+    document.getElementById("Zipcode").value = sessionStorage.getItem("Zipcode");
+    if(sessionStorage.getItem("pnum1") !== null){
+      document.getElementById("pnum1").value = sessionStorage.getItem("pnum1");
+    }
+    document.getElementById("pnum2").value = sessionStorage.getItem("pnum2");
+    document.getElementById("pnum3").value = sessionStorage.getItem("pnum3");
+    if(sessionStorage.getItem("cnum1") !== null){
+      document.getElementById("cnum1").value = sessionStorage.getItem("cnum1");
+    }
+    document.getElementById("cnum2").value = sessionStorage.getItem("cnum2");
+    document.getElementById("cnum3").value = sessionStorage.getItem("cnum3");
+    document.getElementById("Birthday").value = sessionStorage.getItem("Birthday");
+    if(sessionStorage.getItem("Citizenship") !== null){
+      document.getElementById("Citizenship").value = sessionStorage.getItem("Citizenship");
+    }
+    if(sessionStorage.getItem("zsign") !== null){
+      document.getElementById("zsign").value = sessionStorage.getItem("zsign");
+    }
+    if(sessionStorage.getItem("zyear") !== null){
+      document.getElementById("zyear").value = sessionStorage.getItem("zyear");
+    }
+    if(sessionStorage.getItem("bdw") !== null){
+      document.getElementById("bdw").value = sessionStorage.getItem("bdw");
+    }
+  }
+</script>
+</body>
+</html>

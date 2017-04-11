@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<title>Result</title>
+<link rel="stylesheet" media="screen" href="style_table.css">
+<body>
+<div class="box" >
+	<h1>Thank You !</h1>
+	<table border="1">
+		<tr>
+			<td>First Name :</td>
+			<td id = firstname ></td>
+		</tr>
+		<tr>
+			<td>Last Name :</td>
+			<td id= lastname></td>
+		</tr>
+		<tr>
+			<td>House number :</td>
+			<td id= House></td>
+		</tr>
+		<tr>
+			<td>Street :</td>
+			<td id= Street></td>
+		</tr>
+		<tr>
+			<td>City :</td>
+			<td id= City></td>
+		</tr>
+		<tr>
+			<td>Province :</td>
+			<td id= Province></td>
+		</tr>
+		<tr>
+			<td>Zipcode :</td>
+			<td id= Zipcode></td>
+		</tr>
+		<tr>
+			<td>Phone number :</td>
+			<td id= pnum></td>
+		</tr>
+		<tr>
+			<td>Cell phone number :</td>
+			<td id= cnum></td>
+		</tr>
+		<tr>
+			<td>Birthday :</td>
+			<td id= Birthday></td>
+		</tr>
+		<tr>
+			<td>Citizenship number :</td>
+			<td id= Citizenship></td>
+		</tr>
+		<tr>
+			<td>Zodiac Sign :</td>
+			<td id= zsign></td>
+		</tr>
+		<tr>
+			<td>Zodiac Year :</td>
+			<td id= zyear></td>
+		</tr>
+		<tr>
+			<td>Birth Day of Week :</td>
+			<td id= bdw></td>
+		</tr>
+	</table>
+</div>
+
+
+
+<script type="text/javascript">
+	document.getElementById("firstname").innerHTML = localStorage.getItem("fname");
+	document.getElementById("lastname").innerHTML = localStorage.getItem("lname");
+	document.getElementById("House").innerHTML = localStorage.getItem("House");
+	document.getElementById("Street").innerHTML = localStorage.getItem("Street");
+	document.getElementById("City").innerHTML = localStorage.getItem("City");
+    document.getElementById("Province").innerHTML = localStorage.getItem("Province");
+    document.getElementById("Zipcode").innerHTML = localStorage.getItem("Zipcode");    
+    document.getElementById("pnum").innerHTML = localStorage.getItem("pnum1")+"-"+localStorage.getItem("pnum2")+"-"+localStorage.getItem("pnum3");        
+    document.getElementById("cnum").innerHTML = localStorage.getItem("cnum1")+"-"+ localStorage.getItem("cnum2")+"-"+ localStorage.getItem("cnum3");    
+    document.getElementById("Birthday").innerHTML = localStorage.getItem("Birthday");
+    document.getElementById("Citizenship").innerHTML = localStorage.getItem("Citizenship");
+    document.getElementById("zsign").innerHTML = localStorage.getItem("zsign");
+    document.getElementById("zyear").innerHTML = localStorage.getItem("zyear");
+	document.getElementById("bdw").innerHTML = localStorage.getItem("bdw");
+</script>	
+</body>
+</html>

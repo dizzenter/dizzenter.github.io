@@ -1,0 +1,100 @@
+body{
+	background-image:url(http://www.hbc333.com/data/out/80/47919123-flat-wallpaper.png);
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 130px;
+	margin: 0;
+}
+h1{
+	color: #f39c12;	
+}
+.box{
+	width:500px;
+	height:620px;  	
+	border-radius:30px;
+	border:1px solid rgba(255,255,255,.3);
+	padding:5px 0px 40px 50px;
+	text-align: left;
+	text-shadow:0 1px 1px rgba(0,0,0,.4);
+	background: rgba(255,255,255,0.5);
+	margin:auto;	
+	position: relative;
+	filter: drop-shadow(15px 20px 20px gray);
+  }
+
+.l2{
+	margin-left: 56px;
+}
+.l3{
+	margin-left: 66px;
+}
+.l4{
+	margin-left: 37px;
+}
+.l5{
+	margin-left: 41px;
+}
+
+ #saveButton  {
+  background-color: #2ecc71;
+  border-radius:10px;
+	border:1px solid rgba(255,255,255,.3);
+    color: white;
+    padding: 15px 32px;
+   	float: left;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#saveButton:hover {
+    background-color: white;     
+    color: #2ecc71;
+    border: 5px solid #2ecc71;
+}
+
+#cancelButton  {
+  background-color: #e74c3c;
+    border-radius:10px;
+	border:1px solid rgba(255,255,255,.3);
+    color: white;
+	float: left;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#cancelButton:hover {
+    background-color: white;     
+    color: #e74c3c;
+    border: 5px solid #e74c3c;
+}
+
+#submitButton  {
+  background-color: #3498db;
+    border-radius:10px;
+	border:1px solid rgba(255,255,255,.3);
+    color: white;
+	float: left;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#submitButton:hover {
+    background-color: white;     
+    color: #3498db;
+    border: 5px solid #3498db;
+}
+
+
+}
